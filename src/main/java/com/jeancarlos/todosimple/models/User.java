@@ -29,7 +29,7 @@ public class User {
     private String username;
 
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @Column(name = "password", length = 60, nullable = false)
+    @Column(name = "password", length = 20, nullable = false)
     @NotEmpty(groups = {Createuser.class, UpdateUser.class})
     @NotNull(groups = {Createuser.class, UpdateUser.class})
     @Size(groups = {Createuser.class, UpdateUser.class}, min = 8, max = 20)
